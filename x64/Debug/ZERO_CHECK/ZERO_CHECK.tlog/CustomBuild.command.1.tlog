@@ -1,0 +1,10 @@
+^C:\USERS\PEDRO\DOCUMENTS\PKGS\DOCX\CMAKEFILES\2F03E20407E19B698CF290F6259F1B1B\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -SC:/Users/Pedro/Documents/pkgs/docx -BC:/Users/Pedro/Documents/pkgs/docx --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/Pedro/Documents/pkgs/docx/docx.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
