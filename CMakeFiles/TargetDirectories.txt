@@ -1,3 +1,0 @@
-C:/Users/Pedro/Documents/pkgs/docx/CMakeFiles/main_program.dir
-C:/Users/Pedro/Documents/pkgs/docx/CMakeFiles/ALL_BUILD.dir
-C:/Users/Pedro/Documents/pkgs/docx/CMakeFiles/ZERO_CHECK.dir
