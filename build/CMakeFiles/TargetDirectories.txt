@@ -1,0 +1,3 @@
+C:/Users/Pedro/Documents/pkgs/docx/build/CMakeFiles/main_program.dir
+C:/Users/Pedro/Documents/pkgs/docx/build/CMakeFiles/edit_cache.dir
+C:/Users/Pedro/Documents/pkgs/docx/build/CMakeFiles/rebuild_cache.dir
