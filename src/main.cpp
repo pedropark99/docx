@@ -1,11 +1,13 @@
 #include <iostream>
 
-#include "libxml/tree.h"
+#include "docx_obj.hpp"
+#include "docx_xml_utils.hpp"
+
 
 
 int main (void) {
 
-    xmlDocPtr document = xmlNewDoc(BAD_CAST "1.0");
-
+    docx doc;
+    print_tree(xmlDocGetRootElement(doc.document));
     return 1;
 }
