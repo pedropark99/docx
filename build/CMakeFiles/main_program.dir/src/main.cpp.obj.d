@@ -131,4 +131,7 @@ CMakeFiles/main_program.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/11.2.0/bits/basic_ios.tcc \
  C:/msys64/mingw64/include/c++/11.2.0/bits/ostream.tcc \
  C:/msys64/mingw64/include/c++/11.2.0/istream \
- C:/msys64/mingw64/include/c++/11.2.0/bits/istream.tcc
+ C:/msys64/mingw64/include/c++/11.2.0/bits/istream.tcc \
+ C:/Users/Pedro/Documents/pkgs/docx/include/rapidxml/rapidxml.hpp \
+ C:/msys64/mingw64/include/c++/11.2.0/cassert \
+ C:/msys64/mingw64/x86_64-w64-mingw32/include/assert.h
