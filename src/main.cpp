@@ -1,13 +1,11 @@
 #include <iostream>
 
-#include "rapidxml/rapidxml.hpp"
-
-
-#include "libxml/parser.h"
+#include "libxml/tree.h"
 
 
 int main (void) {
-    rapidxml::xml_document<> doc;
+
+    xmlDocPtr document = xmlNewDoc(BAD_CAST "1.0");
 
     return 1;
 }

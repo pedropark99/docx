@@ -134,24 +134,32 @@ CMakeFiles/docx.dir/src/main.cpp.obj: ../src/main.cpp \
   C:/msys64/mingw64/include/c++/11.2.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/11.2.0/istream \
   C:/msys64/mingw64/include/c++/11.2.0/bits/istream.tcc \
-  ../include/rapidxml/rapidxml.hpp \
-  C:/msys64/mingw64/include/c++/11.2.0/cassert \
-  C:/msys64/mingw64/x86_64-w64-mingw32/include/assert.h \
-  ../include/rapidxml/rapidxml_utils.hpp \
-  ../include/rapidxml/rapidxml.hpp \
-  C:/msys64/mingw64/include/c++/11.2.0/vector \
-  C:/msys64/mingw64/include/c++/11.2.0/bits/stl_uninitialized.h \
-  C:/msys64/mingw64/include/c++/11.2.0/bits/stl_vector.h \
-  C:/msys64/mingw64/include/c++/11.2.0/bits/stl_bvector.h \
-  C:/msys64/mingw64/include/c++/11.2.0/bits/vector.tcc \
-  C:/msys64/mingw64/include/c++/11.2.0/fstream \
-  C:/msys64/mingw64/include/c++/11.2.0/bits/codecvt.h \
-  C:/msys64/mingw64/include/c++/11.2.0/x86_64-w64-mingw32/bits/basic_file.h \
-  C:/msys64/mingw64/include/c++/11.2.0/x86_64-w64-mingw32/bits/c++io.h \
-  C:/msys64/mingw64/include/c++/11.2.0/bits/fstream.tcc \
-  ../include/rapidxml/rapidxml_print.hpp \
-  C:/msys64/mingw64/include/c++/11.2.0/iterator \
-  C:/msys64/mingw64/include/c++/11.2.0/bits/stream_iterator.h
+  ../include/docx_obj.hpp \
+  ../include/libxml/parser.h \
+  ../include/libxml/xmlversion.h \
+  ../include/libxml/xmlexports.h \
+  ../include/libxml/tree.h \
+  ../include/libxml/xmlstring.h \
+  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdarg.h \
+  C:/msys64/mingw64/x86_64-w64-mingw32/include/stdarg.h \
+  C:/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
+  ../include/libxml/xmlregexp.h \
+  ../include/libxml/dict.h \
+  ../include/libxml/hash.h \
+  ../include/libxml/parser.h \
+  ../include/libxml/valid.h \
+  ../include/libxml/xmlerror.h \
+  ../include/libxml/list.h \
+  ../include/libxml/xmlautomata.h \
+  ../include/libxml/entities.h \
+  ../include/libxml/encoding.h \
+  C:/msys64/mingw64/include/iconv.h \
+  ../include/libxml/xmlIO.h \
+  ../include/libxml/globals.h \
+  ../include/libxml/SAX2.h \
+  ../include/libxml/xmlmemory.h \
+  ../include/libxml/threads.h \
+  ../include/libxml/tree.h
 
 
 C:/msys64/mingw64/include/c++/11.2.0/iosfwd:
@@ -220,6 +228,8 @@ C:/msys64/mingw64/x86_64-w64-mingw32/include/stdio.h:
 
 C:/msys64/mingw64/include/c++/11.2.0/type_traits:
 
+C:/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h:
+
 C:/msys64/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 
 C:/msys64/mingw64/include/c++/11.2.0/new:
@@ -243,6 +253,8 @@ C:/msys64/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h:
 C:/msys64/mingw64/include/c++/11.2.0/bits/exception.h:
 
 C:/msys64/mingw64/include/c++/11.2.0/bits/exception_ptr.h:
+
+../include/libxml/tree.h:
 
 C:/msys64/mingw64/include/c++/11.2.0/x86_64-w64-mingw32/bits/atomic_word.h:
 
@@ -330,6 +342,8 @@ C:/msys64/mingw64/include/c++/11.2.0/bits/streambuf.tcc:
 
 C:/msys64/mingw64/x86_64-w64-mingw32/include/pthread_signal.h:
 
+../include/libxml/encoding.h:
+
 C:/msys64/mingw64/x86_64-w64-mingw32/include/time.h:
 
 C:/msys64/mingw64/x86_64-w64-mingw32/include/sys/timeb.h:
@@ -349,8 +363,6 @@ C:/msys64/mingw64/include/c++/11.2.0/string:
 C:/msys64/mingw64/include/c++/11.2.0/bits/allocator.h:
 
 C:/msys64/mingw64/include/c++/11.2.0/x86_64-w64-mingw32/bits/c++allocator.h:
-
-C:/msys64/mingw64/include/c++/11.2.0/bits/vector.tcc:
 
 C:/msys64/mingw64/include/c++/11.2.0/ext/new_allocator.h:
 
@@ -422,34 +434,44 @@ C:/msys64/mingw64/include/c++/11.2.0/bits/ostream.tcc:
 
 C:/msys64/mingw64/include/c++/11.2.0/istream:
 
-../include/rapidxml/rapidxml.hpp:
+../include/docx_obj.hpp:
 
-C:/msys64/mingw64/include/c++/11.2.0/cassert:
+../include/libxml/parser.h:
 
-C:/msys64/mingw64/x86_64-w64-mingw32/include/assert.h:
+../include/libxml/xmlautomata.h:
 
-../include/rapidxml/rapidxml_utils.hpp:
+../include/libxml/xmlversion.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/vector:
+../include/libxml/xmlstring.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/bits/stl_uninitialized.h:
+../include/libxml/xmlexports.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/bits/stl_vector.h:
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdarg.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/bits/stl_bvector.h:
+C:/msys64/mingw64/x86_64-w64-mingw32/include/stdarg.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/fstream:
+../include/libxml/xmlregexp.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/bits/codecvt.h:
+../include/libxml/dict.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/x86_64-w64-mingw32/bits/basic_file.h:
+../include/libxml/hash.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/x86_64-w64-mingw32/bits/c++io.h:
+../include/libxml/valid.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/bits/fstream.tcc:
+../include/libxml/xmlerror.h:
 
-../include/rapidxml/rapidxml_print.hpp:
+../include/libxml/list.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/iterator:
+../include/libxml/entities.h:
 
-C:/msys64/mingw64/include/c++/11.2.0/bits/stream_iterator.h:
+C:/msys64/mingw64/include/iconv.h:
+
+../include/libxml/xmlIO.h:
+
+../include/libxml/globals.h:
+
+../include/libxml/SAX2.h:
+
+../include/libxml/xmlmemory.h:
+
+../include/libxml/threads.h:
