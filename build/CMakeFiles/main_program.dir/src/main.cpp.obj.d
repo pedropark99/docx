@@ -134,4 +134,19 @@ CMakeFiles/main_program.dir/src/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/11.2.0/bits/istream.tcc \
  C:/Users/Pedro/Documents/pkgs/docx/include/rapidxml/rapidxml.hpp \
  C:/msys64/mingw64/include/c++/11.2.0/cassert \
- C:/msys64/mingw64/x86_64-w64-mingw32/include/assert.h
+ C:/msys64/mingw64/x86_64-w64-mingw32/include/assert.h \
+ C:/Users/Pedro/Documents/pkgs/docx/include/rapidxml/rapidxml_utils.hpp \
+ C:/Users/Pedro/Documents/pkgs/docx/include/rapidxml/rapidxml.hpp \
+ C:/msys64/mingw64/include/c++/11.2.0/vector \
+ C:/msys64/mingw64/include/c++/11.2.0/bits/stl_uninitialized.h \
+ C:/msys64/mingw64/include/c++/11.2.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/11.2.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/11.2.0/bits/vector.tcc \
+ C:/msys64/mingw64/include/c++/11.2.0/fstream \
+ C:/msys64/mingw64/include/c++/11.2.0/bits/codecvt.h \
+ C:/msys64/mingw64/include/c++/11.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/msys64/mingw64/include/c++/11.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/msys64/mingw64/include/c++/11.2.0/bits/fstream.tcc \
+ C:/Users/Pedro/Documents/pkgs/docx/include/rapidxml/rapidxml_print.hpp \
+ C:/msys64/mingw64/include/c++/11.2.0/iterator \
+ C:/msys64/mingw64/include/c++/11.2.0/bits/stream_iterator.h
