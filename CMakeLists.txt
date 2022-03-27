@@ -1,3 +1,8 @@
+
+### CMAKE COMMAND
+## cmake -G "MinGW Makefiles" -S .. -B .
+## mingw32-make
+
 cmake_minimum_required(VERSION 3.10)
 
 # set the project name
@@ -17,5 +22,13 @@ set(PROJECT_BINARY_DIR "${PROJECT_ROOT}/build")
 # the include directory
 include_directories(${PROJECT_ROOT}/include)
 
+
+
 # define the .cpp files to be compiled
-add_executable(main_program src/main.cpp)
+add_executable(docx src/main.cpp)
+
+
+# link libxml2 library ------------------------------------------------
+# target_link_libraries needs to be after the add_executable command
+# because it will use the "docx" name defined by add_executable.
+target_link_libraries(docx ${CMAKE_SOURCE_DIR}/lib/libxml2.a)

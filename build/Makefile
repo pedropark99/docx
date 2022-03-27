@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main_program
+# Target rules for targets named docx
 
 # Build rule for target.
-main_program: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main_program
-.PHONY : main_program
+docx: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 docx
+.PHONY : docx
 
 # fast build rule for target.
-main_program/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_program.dir\build.make CMakeFiles/main_program.dir/build
-.PHONY : main_program/fast
+docx/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/build
+.PHONY : docx/fast
 
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
 # target to build an object file
 src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_program.dir\build.make CMakeFiles/main_program.dir/src/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/src/main.cpp.obj
 .PHONY : src/main.cpp.obj
 
 src/main.i: src/main.cpp.i
@@ -141,7 +141,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_program.dir\build.make CMakeFiles/main_program.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -149,7 +149,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_program.dir\build.make CMakeFiles/main_program.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -160,7 +160,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main_program
+	@echo ... docx
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

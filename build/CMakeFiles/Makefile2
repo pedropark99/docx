@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = C:\Users\Pedro\Documents\pkgs\docx\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/main_program.dir/all
+all: CMakeFiles/docx.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/main_program.dir/clean
+clean: CMakeFiles/docx.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main_program.dir
+# Target rules for target CMakeFiles/docx.dir
 
 # All Build rule for target.
-CMakeFiles/main_program.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_program.dir\build.make CMakeFiles/main_program.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_program.dir\build.make CMakeFiles/main_program.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Pedro\Documents\pkgs\docx\build\CMakeFiles --progress-num=1,2 "Built target main_program"
-.PHONY : CMakeFiles/main_program.dir/all
+CMakeFiles/docx.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Pedro\Documents\pkgs\docx\build\CMakeFiles --progress-num=1,2 "Built target docx"
+.PHONY : CMakeFiles/docx.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main_program.dir/rule: cmake_check_build_system
+CMakeFiles/docx.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Pedro\Documents\pkgs\docx\build\CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/main_program.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/docx.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Pedro\Documents\pkgs\docx\build\CMakeFiles 0
-.PHONY : CMakeFiles/main_program.dir/rule
+.PHONY : CMakeFiles/docx.dir/rule
 
 # Convenience name for target.
-main_program: CMakeFiles/main_program.dir/rule
-.PHONY : main_program
+docx: CMakeFiles/docx.dir/rule
+.PHONY : docx
 
 # clean rule for target.
-CMakeFiles/main_program.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main_program.dir\build.make CMakeFiles/main_program.dir/clean
-.PHONY : CMakeFiles/main_program.dir/clean
+CMakeFiles/docx.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/clean
+.PHONY : CMakeFiles/docx.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
