@@ -135,19 +135,20 @@ CMakeFiles/docx.dir/src/main.cpp.obj
  C:/msys64/mingw64/include/c++/11.2.0/bits/ostream.tcc
  C:/msys64/mingw64/include/c++/11.2.0/istream
  C:/msys64/mingw64/include/c++/11.2.0/bits/istream.tcc
- C:/Users/Pedro/Documents/pkgs/docx/include/docx_obj.hpp
- C:/Users/Pedro/Documents/pkgs/docx/include/libxml/parser.h
+ C:/Users/Pedro/Documents/pkgs/docx/include/libxml/tree.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/xmlversion.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/xmlexports.h
- C:/Users/Pedro/Documents/pkgs/docx/include/libxml/tree.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/xmlstring.h
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdarg.h
  C:/msys64/mingw64/x86_64-w64-mingw32/include/stdarg.h
  C:/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/xmlregexp.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/dict.h
- C:/Users/Pedro/Documents/pkgs/docx/include/libxml/hash.h
+ C:/Users/Pedro/Documents/pkgs/docx/include/libxml/xmlmemory.h
+ C:/Users/Pedro/Documents/pkgs/docx/include/libxml/threads.h
+ C:/Users/Pedro/Documents/pkgs/docx/include/libxml/globals.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/parser.h
+ C:/Users/Pedro/Documents/pkgs/docx/include/libxml/hash.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/valid.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/xmlerror.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/list.h
@@ -156,9 +157,5 @@ CMakeFiles/docx.dir/src/main.cpp.obj
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/encoding.h
  C:/msys64/mingw64/include/iconv.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/xmlIO.h
- C:/Users/Pedro/Documents/pkgs/docx/include/libxml/globals.h
  C:/Users/Pedro/Documents/pkgs/docx/include/libxml/SAX2.h
- C:/Users/Pedro/Documents/pkgs/docx/include/libxml/xmlmemory.h
- C:/Users/Pedro/Documents/pkgs/docx/include/libxml/threads.h
- C:/Users/Pedro/Documents/pkgs/docx/include/libxml/tree.h
 

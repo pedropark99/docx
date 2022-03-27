@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/docx.dir/includes_CXX.rsp
 
-CXX_FLAGS = -std=gnu++11
+CXX_FLAGS = -DIN_LIBXML -std=gnu++11
 

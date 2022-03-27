@@ -134,19 +134,20 @@ CMakeFiles/docx.dir/src/main.cpp.obj: ../src/main.cpp \
   C:/msys64/mingw64/include/c++/11.2.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/11.2.0/istream \
   C:/msys64/mingw64/include/c++/11.2.0/bits/istream.tcc \
-  ../include/docx_obj.hpp \
-  ../include/libxml/parser.h \
+  ../include/libxml/tree.h \
   ../include/libxml/xmlversion.h \
   ../include/libxml/xmlexports.h \
-  ../include/libxml/tree.h \
   ../include/libxml/xmlstring.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdarg.h \
   C:/msys64/mingw64/x86_64-w64-mingw32/include/stdarg.h \
   C:/msys64/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
   ../include/libxml/xmlregexp.h \
   ../include/libxml/dict.h \
-  ../include/libxml/hash.h \
+  ../include/libxml/xmlmemory.h \
+  ../include/libxml/threads.h \
+  ../include/libxml/globals.h \
   ../include/libxml/parser.h \
+  ../include/libxml/hash.h \
   ../include/libxml/valid.h \
   ../include/libxml/xmlerror.h \
   ../include/libxml/list.h \
@@ -155,11 +156,7 @@ CMakeFiles/docx.dir/src/main.cpp.obj: ../src/main.cpp \
   ../include/libxml/encoding.h \
   C:/msys64/mingw64/include/iconv.h \
   ../include/libxml/xmlIO.h \
-  ../include/libxml/globals.h \
-  ../include/libxml/SAX2.h \
-  ../include/libxml/xmlmemory.h \
-  ../include/libxml/threads.h \
-  ../include/libxml/tree.h
+  ../include/libxml/SAX2.h
 
 
 C:/msys64/mingw64/include/c++/11.2.0/iosfwd:
@@ -434,10 +431,6 @@ C:/msys64/mingw64/include/c++/11.2.0/bits/ostream.tcc:
 
 C:/msys64/mingw64/include/c++/11.2.0/istream:
 
-../include/docx_obj.hpp:
-
-../include/libxml/parser.h:
-
 ../include/libxml/xmlautomata.h:
 
 ../include/libxml/xmlversion.h:
@@ -454,6 +447,14 @@ C:/msys64/mingw64/x86_64-w64-mingw32/include/stdarg.h:
 
 ../include/libxml/dict.h:
 
+../include/libxml/xmlmemory.h:
+
+../include/libxml/threads.h:
+
+../include/libxml/globals.h:
+
+../include/libxml/parser.h:
+
 ../include/libxml/hash.h:
 
 ../include/libxml/valid.h:
@@ -468,10 +469,4 @@ C:/msys64/mingw64/include/iconv.h:
 
 ../include/libxml/xmlIO.h:
 
-../include/libxml/globals.h:
-
 ../include/libxml/SAX2.h:
-
-../include/libxml/xmlmemory.h:
-
-../include/libxml/threads.h:
