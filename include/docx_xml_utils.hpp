@@ -16,3 +16,15 @@ static void print_tree (xmlNode * a_node) {
         print_tree(current_node->children);
     }
 }
+
+
+
+void write_xml (xmlDoc* document, const char *filename, bool indent = true) {
+
+    if (indent) {
+        xmlIndentTreeOutput = 1;
+    }
+
+    xmlSaveFormatFile(filename, document, 1);
+
+};
