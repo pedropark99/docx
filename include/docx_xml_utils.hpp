@@ -4,7 +4,7 @@
 
 
 
-static void print_tree (xmlNode *node) {
+void print_tree (xmlNode *node) {
 
     for (xmlNode *current_node = node; current_node; current_node = current_node->next) {
         if (current_node->type == XML_ELEMENT_NODE) {
@@ -15,7 +15,7 @@ static void print_tree (xmlNode *node) {
     }
 }
 
-static void print_xml_document (docx docx) {
+void print_xml_document (docx docx) {
     print_tree(xmlDocGetRootElement(docx.document));
 }
 
