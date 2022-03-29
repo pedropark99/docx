@@ -30,6 +30,5 @@ int main (void) {
 
     LOG(find_body_node(doc.document));
 
-
     return 1;
 }
