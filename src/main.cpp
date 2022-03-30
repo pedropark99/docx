@@ -27,8 +27,6 @@ node->child;
 int main (void) {
 
     docx::docx doc;
-    doc.print_xml_document();
-    LOG("\n\n");
     doc.print_xml_tree_document();
 
     return 1;

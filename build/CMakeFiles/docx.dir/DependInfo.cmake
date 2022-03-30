@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Pedro/Documents/pkgs/docx/src/main.cpp" "CMakeFiles/docx.dir/src/main.cpp.obj" "gcc" "CMakeFiles/docx.dir/src/main.cpp.obj.d"
+  "C:/Users/Pedro/Documents/pkgs/docx/src/paragraphs.cpp" "CMakeFiles/docx.dir/src/paragraphs.cpp.obj" "gcc" "CMakeFiles/docx.dir/src/paragraphs.cpp.obj.d"
   )
 
 # Targets to which this target links.

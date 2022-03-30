@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/docx.dir/src/main.cpp.obj"
   "CMakeFiles/docx.dir/src/main.cpp.obj.d"
+  "CMakeFiles/docx.dir/src/paragraphs.cpp.obj"
+  "CMakeFiles/docx.dir/src/paragraphs.cpp.obj.d"
   "docx.exe"
   "docx.exe.manifest"
   "docx.pdb"

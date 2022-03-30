@@ -152,6 +152,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/paragraphs.obj: src/paragraphs.cpp.obj
+.PHONY : src/paragraphs.obj
+
+# target to build an object file
+src/paragraphs.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/src/paragraphs.cpp.obj
+.PHONY : src/paragraphs.cpp.obj
+
+src/paragraphs.i: src/paragraphs.cpp.i
+.PHONY : src/paragraphs.i
+
+# target to preprocess a source file
+src/paragraphs.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/src/paragraphs.cpp.i
+.PHONY : src/paragraphs.cpp.i
+
+src/paragraphs.s: src/paragraphs.cpp.s
+.PHONY : src/paragraphs.s
+
+# target to generate assembly for a file
+src/paragraphs.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\docx.dir\build.make CMakeFiles/docx.dir/src/paragraphs.cpp.s
+.PHONY : src/paragraphs.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -164,6 +188,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/paragraphs.obj
+	@echo ... src/paragraphs.i
+	@echo ... src/paragraphs.s
 .PHONY : help
 
 

@@ -38,15 +38,4 @@ void write_xml (xmlDoc* document, const char *filename, bool indent = true) {
 
 
 
-xmlNodePtr find_body_node (xmlDoc* document) {
-    xmlNodePtr current_node = xmlDocGetRootElement(document);
-    while (current_node != NULL) {
-        if (xmlStrEqual(current_node->name, BAD_CAST "body")) {
-            return current_node;
-        }
 
-        current_node = current_node->children;
-    }
-
-    return NULL;
-}

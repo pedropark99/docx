@@ -27,7 +27,7 @@ set(CMAKE_CXX_FLAGS "-DIN_LIBXML")
 
 
 # define the .cpp files to be compiled
-add_executable(docx src/main.cpp)
+add_executable(docx src/main.cpp src/paragraphs.cpp)
 
 
 # link libxml2 library ------------------------------------------------
