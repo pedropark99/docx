@@ -1,10 +1,12 @@
+#pragma once
 
 #include "libxml/parser.h"
 #include "libxml/tree.h"
 
 
 
-class docx {
+namespace docx {
+    class docx {
     public:
         /* document pointer */
         xmlDocPtr document;
@@ -14,4 +16,48 @@ class docx {
             document = xmlReadDoc(BAD_CAST default_docx, NULL, "UTF-8", 1);
         };
 
+
+        // =======================================
+        // PUBLIC METHODS OF docx CLASS:
+        // =======================================
+        void print_xml_tree_document(){
+            int deep_index = 1;
+            xmlNodePtr current_child_node = document->children;
+            xmlNodePtr current_sibling_node;
+
+            while (current_child_node != NULL) {
+                printf("%*c%s%c\n", deep_index, '<', current_child_node->name, '>');
+
+                if (current_child_node->next != NULL) {
+                    current_sibling_node = current_child_node->next;
+
+                    while (current_sibling_node != NULL) {
+                        printf("%*c%s%c\n", deep_index, '<', current_sibling_node->name, '>');
+                        current_sibling_node = current_sibling_node->next;
+                    }
+                }
+
+                current_child_node = current_child_node->children;
+                deep_index = deep_index + 2;
+            }
+        }
+
+
+
+        void print_xml_document(){
+            int deep_index = 1;
+            xmlNodePtr current_child_node = document->children;
+
+            while (current_child_node != NULL) {
+                printf("%*c%s%c\n", deep_index, '<', current_child_node->name, '>');
+
+                printf("%*c%s\n", deep_index, ' ', (char *)xmlNodeGetContent(current_child_node));
+
+                current_child_node = current_child_node->children;
+                deep_index = deep_index + 2;
+            }
+        }
+
+
+    };
 };

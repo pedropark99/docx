@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Pedro/Documents/pkgs/docx/src/paragraphs.c" "CMakeFiles/docx.dir/src/paragraphs.c.obj" "gcc" "CMakeFiles/docx.dir/src/paragraphs.c.obj.d"
   "C:/Users/Pedro/Documents/pkgs/docx/src/main.cpp" "CMakeFiles/docx.dir/src/main.cpp.obj" "gcc" "CMakeFiles/docx.dir/src/main.cpp.obj.d"
   )
 

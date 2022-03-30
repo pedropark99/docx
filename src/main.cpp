@@ -1,9 +1,11 @@
 #include <iostream>
+#include <stdio.h>
 
 #include "docx_obj.hpp"
 #include "docx_xml_utils.hpp"
 
 #define LOG(X) std::cout << X << std::endl;
+
 
 /*
 TO GET THE CONTENT OF A NODE
@@ -24,11 +26,10 @@ node->child;
 
 int main (void) {
 
-    docx doc;
-    //print_xml_document(doc);
-    //write_xml(doc.document, "teste.xml");
-
-    LOG(find_body_node(doc.document));
+    docx::docx doc;
+    doc.print_xml_document();
+    LOG("\n\n");
+    doc.print_xml_tree_document();
 
     return 1;
 }

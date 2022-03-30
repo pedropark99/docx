@@ -1,7 +1,8 @@
-
+#pragma once
 
 #include "libxml/tree.h"
 
+#include "docx_obj.hpp"
 
 
 void print_tree (xmlNode *node) {
@@ -15,12 +16,13 @@ void print_tree (xmlNode *node) {
     }
 }
 
-void print_xml_document (docx docx) {
+void print_xml_document (docx::docx docx) {
     print_tree(xmlDocGetRootElement(docx.document));
 }
 
 
-
+// Example of use:
+// write_xml(doc.document, "teste.xml");
 void write_xml (xmlDoc* document, const char *filename, bool indent = true) {
 
     if (indent) {
