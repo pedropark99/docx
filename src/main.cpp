@@ -27,7 +27,13 @@ node->child;
 int main (void) {
 
     docx::docx doc;
-    doc.print_xml_tree_document();
+    docx::p par;
+    docx::rPr properties(NULL, "center", NULL);
+    doc.add_paragraph("Testando esse novo parágrafo");
+
+    // xmlNodePtr pt = par.paragraph_node;
+    // xmlNewTextChild(pt, NULL, "p", NULL);
+    // xmlNewTextChild(pt->children, NULL, "r", "Testando esse parágrafo!");
 
     return 1;
 }
