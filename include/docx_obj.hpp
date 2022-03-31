@@ -101,19 +101,28 @@ namespace docx {
 
     class rPr {
     public:
-        // Indentation of paragraph
-        float ind;
-        // Paragraph alignment
-        char* jc;
-        // Spacing between lines and paragraphs
-        float spacing;
+        xmlNodePtr node;
 
-
-        rPr (float ind = NULL, char* jc = NULL, float spacing = NULL) {
-            ind = ind;
-            jc = jc;
-            spacing = spacing;
+        rPr () {
+            node = xmlNewNode(NULL, BAD_CAST "rPr");
         }
+
+        // xmlNewProp() to create new attributes in a node
+        // Indentation of paragraph
+        void indentation (int value, char* unit) {
+            xmlNewProp(node, BAD_CAST "ind", BAD_CAST (char *)value);
+        }
+
+        void alignment (char* value) {
+            xmlNewProp(node, BAD_CAST "jc", BAD_CAST value);
+        }
+
+        void spacing (int value) {
+            xmlNewProp(node, BAD_CAST "spacing", BAD_CAST (char *)value);
+        }
+
+
+        
     };
 
 
