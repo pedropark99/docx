@@ -136,4 +136,12 @@ namespace docx {
 
 
 
+
+
+    class sectPr {
+
+    };
+
+
+
 };
