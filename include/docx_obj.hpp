@@ -113,10 +113,12 @@ namespace docx {
             xmlNewProp(node, BAD_CAST "ind", BAD_CAST (char *)value);
         }
 
+        // Alignment (or justification) of the paragraph
         void alignment (char* value) {
             xmlNewProp(node, BAD_CAST "jc", BAD_CAST value);
         }
 
+        // Spacing between lines and between other paragraphs
         void spacing (int value) {
             xmlNewProp(node, BAD_CAST "spacing", BAD_CAST (char *)value);
         }
