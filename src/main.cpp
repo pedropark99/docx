@@ -28,8 +28,10 @@ int main (void) {
 
     docx::docx doc;
     docx::p par;
-    docx::rPr properties(NULL, "center", NULL);
+    //docx::rPr properties(NULL, "center", NULL);
     doc.add_paragraph("Testando esse novo parágrafo");
+
+    write_xml(doc.document, "teste.xml");
 
     // xmlNodePtr pt = par.paragraph_node;
     // xmlNewTextChild(pt, NULL, "p", NULL);
