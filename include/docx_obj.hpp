@@ -108,22 +108,29 @@ namespace docx {
         }
 
         // xmlNewProp() to create new attributes in a node
+
+        // Is probably a good ideia to transform this style of functions below in a template
+
         // Indentation of paragraph
         void indentation (int value, char* unit) {
-            xmlNewProp(node, BAD_CAST "ind", BAD_CAST (char *)value);
+            xmlNodePtr alignment_node = xmlNewNode(NULL, BAD_CAST "ind");
+            xmlNewProp(node, BAD_CAST "val", BAD_CAST (char *)value);
         }
 
         // Alignment (or justification) of the paragraph
         void alignment (char* value) {
-            xmlNewProp(node, BAD_CAST "jc", BAD_CAST value);
+            xmlNodePtr alignment_node = xmlNewNode(NULL, BAD_CAST "jc");
+            xmlNewProp(alignment_node, BAD_CAST "val", BAD_CAST value);
         }
 
         // Spacing between lines and between other paragraphs
-        void spacing (int value) {
-            xmlNewProp(node, BAD_CAST "spacing", BAD_CAST (char *)value);
+        void spacing (int before = 0, int after = 0, int line = 0) {
+            xmlNodePtr spacing_node = xmlNewNode(NULL, BAD_CAST "spacing");
+
+            xmlNewProp(spacing_node, BAD_CAST "before", BAD_CAST (char *)before);
+            xmlNewProp(spacing_node, BAD_CAST "after", BAD_CAST (char *)after);
+            xmlNewProp(spacing_node, BAD_CAST "line", BAD_CAST (char *)line);
         }
-
-
         
     };
 
