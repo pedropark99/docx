@@ -62,6 +62,11 @@ namespace docx {
             }
         }
 
+
+        // ===============================================================
+        // Methods for adding content:
+        //
+
         int add_body () {
             xmlNodePtr root = xmlDocGetRootElement(document);
             xmlNodePtr child_node = root->children;
@@ -87,9 +92,8 @@ namespace docx {
             return 3;
         }
 
-        // Methods for adding content:
-        void add_paragraph (char * text = NULL) {
-            //Add body element if necessary
+        void add_paragraph (char const * text = NULL) {
+            //Add body node if necessary
             add_body();
             xmlNodePtr body = xmlDocGetRootElement(document)->children;
 
@@ -118,6 +122,28 @@ namespace docx {
     public:
         xmlNodePtr paragraph_node;
         xmlNodePtr run_node;
+        xmlNodePtr text_node;
+
+        // Default constructor for paragraph node:
+        p (char * text = NULL) {
+            paragraph_node = xmlNewNode(NULL, BAD_CAST "p");
+            run_node = xmlNewNode(NULL, BAD_CAST "r");
+            text_node = xmlNewNode(NULL, BAD_CAST "t");
+
+            paragraph_node->children = run_node;
+            run_node->children = text_node;
+
+
+            /* 
+            If text was provided for context of the paragraph,
+            then add it to the <t> node.
+            */
+           if (text != NULL) {
+               text_node->content = BAD_CAST text;
+           };
+
+        };
+
     };
 
 
@@ -132,13 +158,12 @@ namespace docx {
         }
 
         // xmlNewProp() to create new attributes in a node
-
         // Is probably a good ideia to transform this style of functions below in a template
 
         // Indentation of paragraph
         void indentation (char *value, char *unit) {
-            xmlNodePtr alignment_node = xmlNewNode(NULL, BAD_CAST "ind");
-            xmlNewProp(node, BAD_CAST "val", BAD_CAST value);
+            xmlNodePtr indentation_node = xmlNewNode(NULL, BAD_CAST "ind");
+            xmlNewProp(indentation_node, BAD_CAST "val", BAD_CAST value);
         }
 
         // Alignment (or justification) of the paragraph

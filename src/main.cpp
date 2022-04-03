@@ -28,9 +28,8 @@ SO ALWAYS TEST IF THE CHILDREN NODE IS NULL (empty) BEFORE ACCESSING ITS NAME OR
 
 int main (void) {
 
-    docx::docx doc;
-    doc.add_body();
+    docx::p test;
 
-    doc.print_xml_tree_document();
-    return 1;
+    LOG(test.paragraph_node->children->name);
+    LOG(test.paragraph_node->children->children->name);
 }
