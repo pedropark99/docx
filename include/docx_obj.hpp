@@ -5,8 +5,6 @@
 #include "libxml/parser.h"
 #include "libxml/tree.h"
 
-// <w:body><w:p w14:paraId=\"42F68DC4\" w14:textId=\"77777777\" w:rsidR=\"000850D5\" w:rsidRDefault=\"000850D5\"/><w:sectPr w:rsidR=\"000850D5\"><w:pgSz w:w=\"11906\" w:h=\"16838\"/><w:pgMar w:top=\"1417\" w:right=\"1701\" w:bottom=\"1417\" w:left=\"1701\" w:header=\"708\" w:footer=\"708\" w:gutter=\"0\"/><w:cols w:space=\"708\"/><w:docGrid w:linePitch=\"360\"/></w:sectPr></w:body>
-
 
 
 namespace docx {
@@ -16,7 +14,7 @@ namespace docx {
         xmlDocPtr document;
 
         docx() {
-            const char * default_docx = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<w:document xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" mc:Ignorable=\"w14 w15 w16se w16cid w16 w16cex w16sdtdh wp14\"><w:body></w:body></w:document>";
+            const char * default_docx = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<w:document xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:cx=\"http://schemas.microsoft.com/office/drawing/2014/chartex\" xmlns:cx1=\"http://schemas.microsoft.com/office/drawing/2015/9/8/chartex\" xmlns:cx2=\"http://schemas.microsoft.com/office/drawing/2015/10/21/chartex\" xmlns:cx3=\"http://schemas.microsoft.com/office/drawing/2016/5/9/chartex\" xmlns:cx4=\"http://schemas.microsoft.com/office/drawing/2016/5/10/chartex\" xmlns:cx5=\"http://schemas.microsoft.com/office/drawing/2016/5/11/chartex\" xmlns:cx6=\"http://schemas.microsoft.com/office/drawing/2016/5/12/chartex\" xmlns:cx7=\"http://schemas.microsoft.com/office/drawing/2016/5/13/chartex\" xmlns:cx8=\"http://schemas.microsoft.com/office/drawing/2016/5/14/chartex\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:aink=\"http://schemas.microsoft.com/office/drawing/2016/ink\" xmlns:am3d=\"http://schemas.microsoft.com/office/drawing/2017/model3d\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:w16cex=\"http://schemas.microsoft.com/office/word/2018/wordml/cex\" xmlns:w16cid=\"http://schemas.microsoft.com/office/word/2016/wordml/cid\" xmlns:w16=\"http://schemas.microsoft.com/office/word/2018/wordml\" xmlns:w16sdtdh=\"http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash\" xmlns:w16se=\"http://schemas.microsoft.com/office/word/2015/wordml/symex\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" mc:Ignorable=\"w14 w15 w16se w16cid w16 w16cex w16sdtdh wp14\"></w:document>";
             document = xmlReadDoc(BAD_CAST default_docx, NULL, "UTF-8", 1);
         };
 
@@ -64,15 +62,26 @@ namespace docx {
             }
         }
 
+        void add_body () {
+            xmlNodePtr root = xmlDocGetRootElement(document);
+            xmlNodePtr root_child = root->children;
+            if (!xmlStrEqual(root_child->name, BAD_CAST "body")){
+                xmlNewChild(root, NULL, BAD_CAST "body", NULL);
+            } else {
+                std::cout << "Body already present;" << std::endl;
+            }
+        }
 
         // Methods for adding content:
         void add_paragraph (char * text = NULL) {
+            //Add body element if necessary
+            add_body();
             xmlNodePtr body = xmlDocGetRootElement(document)->children;
 
             xmlNewChild(body, NULL, BAD_CAST "p", NULL);
-            xmlNodePtr par = body->children;
             
             if (text != NULL) {
+                xmlNodePtr par = body->children;
                 xmlNewChild(par, NULL, BAD_CAST "r", NULL);
                 xmlNewChild(par->children, NULL, BAD_CAST "t", BAD_CAST text);
             };
@@ -112,24 +121,24 @@ namespace docx {
         // Is probably a good ideia to transform this style of functions below in a template
 
         // Indentation of paragraph
-        void indentation (int value, char* unit) {
+        void indentation (char *value, char *unit) {
             xmlNodePtr alignment_node = xmlNewNode(NULL, BAD_CAST "ind");
-            xmlNewProp(node, BAD_CAST "val", BAD_CAST (char *)value);
+            xmlNewProp(node, BAD_CAST "val", BAD_CAST value);
         }
 
         // Alignment (or justification) of the paragraph
-        void alignment (char* value) {
+        void alignment (char *value) {
             xmlNodePtr alignment_node = xmlNewNode(NULL, BAD_CAST "jc");
             xmlNewProp(alignment_node, BAD_CAST "val", BAD_CAST value);
         }
 
         // Spacing between lines and between other paragraphs
-        void spacing (int before = 0, int after = 0, int line = 0) {
+        void spacing (char const *before = "0", char const *after = "0", char const *line = "0") {
             xmlNodePtr spacing_node = xmlNewNode(NULL, BAD_CAST "spacing");
 
-            xmlNewProp(spacing_node, BAD_CAST "before", BAD_CAST (char *)before);
-            xmlNewProp(spacing_node, BAD_CAST "after", BAD_CAST (char *)after);
-            xmlNewProp(spacing_node, BAD_CAST "line", BAD_CAST (char *)line);
+            xmlNewProp(spacing_node, BAD_CAST "before", BAD_CAST before);
+            xmlNewProp(spacing_node, BAD_CAST "after", BAD_CAST after);
+            xmlNewProp(spacing_node, BAD_CAST "line", BAD_CAST line);
         }
         
     };

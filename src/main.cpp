@@ -27,11 +27,9 @@ node->child;
 int main (void) {
 
     docx::docx doc;
-    docx::p par;
-    //docx::rPr properties(NULL, "center", NULL);
-    doc.add_paragraph("Testando esse novo parágrafo");
+    doc.add_paragraph();
 
-    //write_xml(doc.document, "teste.xml");
+    write_xml(doc.document, "teste.xml");
 
     return 1;
 }
