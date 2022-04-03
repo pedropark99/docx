@@ -21,22 +21,16 @@ node->next;
 
 TO NAVIGATE TO THE NEXT CHILDREN NODE
 node->child;
+
+IMPORTANT: IF YOU ACCESS AN MEMBER OF AN EMPTY NODE, YOU GET WEIRD BUGS
+SO ALWAYS TEST IF THE CHILDREN NODE IS NULL (empty) BEFORE ACCESSING ITS NAME OR CONTENTS;
 */
 
 int main (void) {
 
     docx::docx doc;
-    xmlNodePtr root = xmlDocGetRootElement(doc.document);
-    xmlNodePtr child_node = root->children;
+    doc.add_body();
 
-    bool children_is_null;
-    bool body_already_present;
-    children_is_null = child_node == NULL;
-    // Looks like "child_node->name" is the source of the bug
-    //body_already_present = xmlStrEqual(child_node->name, BAD_CAST "body");
-    
-    //LOG(child_node->name);
-    LOG(children_is_null);
-
+    doc.print_xml_tree_document();
     return 1;
 }
