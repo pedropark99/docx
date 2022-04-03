@@ -5,8 +5,6 @@
 #include "docx_xml_utils.hpp"
 
 #define LOG(X) std::cout << X << std::endl;
-#define ISNULL(X) if (X == NULL) { LOG("Is NULL!"); }
-
 
 /*
 TO GET THE CONTENT OF A NODE
@@ -28,15 +26,17 @@ node->child;
 int main (void) {
 
     docx::docx doc;
-    doc.add_body();
     xmlNodePtr root = xmlDocGetRootElement(doc.document);
+    xmlNodePtr child_node = root->children;
 
-    LOG(root->name);
-
-    // xmlNodePtr child = root->xmlChildrenNode;
-    // bool result;
-    // result = child == NULL;
-    // LOG(result);
+    bool children_is_null;
+    bool body_already_present;
+    children_is_null = child_node == NULL;
+    // Looks like "child_node->name" is the source of the bug
+    //body_already_present = xmlStrEqual(child_node->name, BAD_CAST "body");
+    
+    //LOG(child_node->name);
+    LOG(children_is_null);
 
     return 1;
 }
