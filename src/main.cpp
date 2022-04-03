@@ -27,9 +27,8 @@ node->child;
 int main (void) {
 
     docx::docx doc;
-    doc.add_paragraph();
 
-    write_xml(doc.document, "teste.xml");
+    doc.print_xml_document();
 
     return 1;
 }
