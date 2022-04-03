@@ -65,7 +65,9 @@ namespace docx {
         void add_body () {
             xmlNodePtr root = xmlDocGetRootElement(document);
             xmlNodePtr root_child = root->children;
-            if (!xmlStrEqual(root_child->name, BAD_CAST "body")){
+            // If children node is NULL, xmlStrEqual() will not work, so, we
+            // must include an root_child == NULL test
+            if (root_child == NULL | (!xmlStrEqual(root_child->name, BAD_CAST "body"))){
                 xmlNewChild(root, NULL, BAD_CAST "body", NULL);
             } else {
                 std::cout << "Body already present;" << std::endl;
