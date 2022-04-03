@@ -18,23 +18,23 @@ namespace docx {
 
         // Default constructor for paragraph node:
         p (char const * text = NULL) {
-            paragraph_node = xmlNewNode(NULL, BAD_CAST "p");
-            run_node = xmlNewNode(NULL, BAD_CAST "r");
-            text_node = xmlNewNode(NULL, BAD_CAST "t");
+            paragraph_node = xmlNewNode(NULL, BAD_CAST "w:p");
+            run_node = xmlNewNode(NULL, BAD_CAST "w:r");
+            text_node = xmlNewNode(NULL, BAD_CAST "w:t");
 
             paragraph_node->children = run_node;
             run_node->children = text_node;
-
 
             /* 
             If text was provided for context of the paragraph,
             then add it to the <t> node.
             */
-           if (text != NULL) {
+            if (text != NULL) {
                text_node->content = BAD_CAST text;
-           };
-
+            };
         };
+
+
 
     };
 
@@ -125,13 +125,21 @@ namespace docx {
             return 3;
         }
 
-        void add_paragraph (char const * text = NULL) {
+        void add_paragraph (char const * text) {
             //Add body node if necessary
             add_body();
             xmlNodePtr body = xmlDocGetRootElement(document)->children;
             
+            if (text != NULL) {
+                // Paragraph object
+                p par(text);
+                // Add it as a child of "body" node
+                body->children = par.paragraph_node;
+                return;
+            }
+
             // Paragraph object
-            p par(text);
+            p par;
             // Add it as a child of "body" node
             body->children = par.paragraph_node;
             return;
