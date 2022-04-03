@@ -125,7 +125,7 @@ namespace docx {
         xmlNodePtr text_node;
 
         // Default constructor for paragraph node:
-        p (char * text = NULL) {
+        p (char const * text = NULL) {
             paragraph_node = xmlNewNode(NULL, BAD_CAST "p");
             run_node = xmlNewNode(NULL, BAD_CAST "r");
             text_node = xmlNewNode(NULL, BAD_CAST "t");

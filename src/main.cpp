@@ -28,8 +28,10 @@ SO ALWAYS TEST IF THE CHILDREN NODE IS NULL (empty) BEFORE ACCESSING ITS NAME OR
 
 int main (void) {
 
-    docx::p test;
+    docx::p test("Texto de teste");
 
     LOG(test.paragraph_node->children->name);
     LOG(test.paragraph_node->children->children->name);
+    LOG(test.paragraph_node->children->children->content);
+    
 }
