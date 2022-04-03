@@ -8,6 +8,39 @@
 
 
 namespace docx {
+
+
+    class p {
+    public:
+        xmlNodePtr paragraph_node;
+        xmlNodePtr run_node;
+        xmlNodePtr text_node;
+
+        // Default constructor for paragraph node:
+        p (char const * text = NULL) {
+            paragraph_node = xmlNewNode(NULL, BAD_CAST "p");
+            run_node = xmlNewNode(NULL, BAD_CAST "r");
+            text_node = xmlNewNode(NULL, BAD_CAST "t");
+
+            paragraph_node->children = run_node;
+            run_node->children = text_node;
+
+
+            /* 
+            If text was provided for context of the paragraph,
+            then add it to the <t> node.
+            */
+           if (text != NULL) {
+               text_node->content = BAD_CAST text;
+           };
+
+        };
+
+    };
+
+
+
+
     class docx {
         public:
         /* document pointer */
@@ -96,55 +129,15 @@ namespace docx {
             //Add body node if necessary
             add_body();
             xmlNodePtr body = xmlDocGetRootElement(document)->children;
-
-            xmlNewChild(body, NULL, BAD_CAST "p", NULL);
             
-            if (text != NULL) {
-                xmlNodePtr par = body->children;
-                xmlNewChild(par, NULL, BAD_CAST "r", NULL);
-                xmlNewChild(par->children, NULL, BAD_CAST "t", BAD_CAST text);
-            };
-
-            // if (properties != NULL) {
-            //     xmlNewChild(par, NULL, BAD_CAST "rPr", NULL);
-            // }
-
+            // Paragraph object
+            p par(text);
+            // Add it as a child of "body" node
+            body->children = par.paragraph_node;
+            return;
         }
     };
 
-
-
-
-
-
-
-    class p {
-    public:
-        xmlNodePtr paragraph_node;
-        xmlNodePtr run_node;
-        xmlNodePtr text_node;
-
-        // Default constructor for paragraph node:
-        p (char const * text = NULL) {
-            paragraph_node = xmlNewNode(NULL, BAD_CAST "p");
-            run_node = xmlNewNode(NULL, BAD_CAST "r");
-            text_node = xmlNewNode(NULL, BAD_CAST "t");
-
-            paragraph_node->children = run_node;
-            run_node->children = text_node;
-
-
-            /* 
-            If text was provided for context of the paragraph,
-            then add it to the <t> node.
-            */
-           if (text != NULL) {
-               text_node->content = BAD_CAST text;
-           };
-
-        };
-
-    };
 
 
 

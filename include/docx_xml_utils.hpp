@@ -5,19 +5,16 @@
 #include "docx_obj.hpp"
 
 
-void print_tree (xmlNode *node) {
-
-    for (xmlNode *current_node = node; current_node; current_node = current_node->next) {
-        if (current_node->type == XML_ELEMENT_NODE) {
-            printf("%s\n", current_node->name);
-        }
-
-        print_tree(current_node->children);
+void print_xml_document (docx::docx docx, bool indent = true) {
+    // If xmlIndentTreeOutput elements will be printed with indent;
+    if (indent) {
+        xmlIndentTreeOutput = 1;
+    } else {
+        xmlIndentTreeOutput = 0;
     }
-}
 
-void print_xml_document (docx::docx docx) {
-    print_tree(xmlDocGetRootElement(docx.document));
+    //Print entire document for standart output;
+    xmlDocFormatDump(stdout, docx.document, 1);
 }
 
 

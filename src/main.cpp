@@ -26,12 +26,12 @@ IMPORTANT: IF YOU ACCESS AN MEMBER OF AN EMPTY NODE, YOU GET WEIRD BUGS
 SO ALWAYS TEST IF THE CHILDREN NODE IS NULL (empty) BEFORE ACCESSING ITS NAME OR CONTENTS;
 */
 
+
+
 int main (void) {
 
-    docx::p test("Texto de teste");
+    docx::docx doc;
+    doc.add_paragraph("Teste");
+    print_xml_document(doc);
 
-    LOG(test.paragraph_node->children->name);
-    LOG(test.paragraph_node->children->children->name);
-    LOG(test.paragraph_node->children->children->content);
-    
 }
