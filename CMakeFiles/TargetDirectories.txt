@@ -1,0 +1,3 @@
+/home/pedro/Documentos/Projetos/Packages/docx/CMakeFiles/rebuild_cache.dir
+/home/pedro/Documentos/Projetos/Packages/docx/CMakeFiles/edit_cache.dir
+/home/pedro/Documentos/Projetos/Packages/docx/CMakeFiles/docx.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++  -DIN_LIBXML   CMakeFiles/docx.dir/src/main.cpp.o CMakeFiles/docx.dir/src/paragraphs.cpp.o  -o docx  -llzma -liconv -lz -lxml2 

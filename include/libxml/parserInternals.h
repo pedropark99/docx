@@ -574,7 +574,6 @@ XMLPUBFUN void XMLCALL			xmlParserInputShrink	(xmlParserInputPtr in);
 /*
  * Actually comes from the HTML parser but launched from the init stuff.
  */
-XML_DEPRECATED
 XMLPUBFUN void XMLCALL			htmlInitAutoClose	(void);
 XMLPUBFUN htmlParserCtxtPtr XMLCALL	htmlCreateFileParserCtxt(const char *filename,
 	                                         const char *encoding);
@@ -598,34 +597,25 @@ typedef	void	(*xmlEntityReferenceFunc)	(xmlEntityPtr ent,
 						 xmlNodePtr firstNode,
 						 xmlNodePtr lastNode);
 
-XML_DEPRECATED
 XMLPUBFUN void XMLCALL		xmlSetEntityReferenceFunc	(xmlEntityReferenceFunc func);
 
-XML_DEPRECATED
 XMLPUBFUN xmlChar * XMLCALL
 			xmlParseQuotedString	(xmlParserCtxtPtr ctxt);
-XML_DEPRECATED
 XMLPUBFUN void XMLCALL
                         xmlParseNamespace       (xmlParserCtxtPtr ctxt);
-XML_DEPRECATED
 XMLPUBFUN xmlChar * XMLCALL
 			xmlNamespaceParseNSDef	(xmlParserCtxtPtr ctxt);
-XML_DEPRECATED
 XMLPUBFUN xmlChar * XMLCALL
 			xmlScanName		(xmlParserCtxtPtr ctxt);
-XML_DEPRECATED
 XMLPUBFUN xmlChar * XMLCALL
 			xmlNamespaceParseNCName	(xmlParserCtxtPtr ctxt);
-XML_DEPRECATED
 XMLPUBFUN void XMLCALL	xmlParserHandleReference(xmlParserCtxtPtr ctxt);
-XML_DEPRECATED
 XMLPUBFUN xmlChar * XMLCALL
 			xmlNamespaceParseQName	(xmlParserCtxtPtr ctxt,
 						 xmlChar **prefix);
 /**
  * Entities
  */
-XML_DEPRECATED
 XMLPUBFUN xmlChar * XMLCALL
 		xmlDecodeEntities		(xmlParserCtxtPtr ctxt,
 						 int len,
@@ -633,7 +623,6 @@ XMLPUBFUN xmlChar * XMLCALL
 						 xmlChar end,
 						 xmlChar  end2,
 						 xmlChar end3);
-XML_DEPRECATED
 XMLPUBFUN void XMLCALL
 			xmlHandleEntity		(xmlParserCtxtPtr ctxt,
 						 xmlEntityPtr entity);

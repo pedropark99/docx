@@ -31,12 +31,17 @@ add_executable(docx src/main.cpp src/paragraphs.cpp)
 
 
 # link libxml2 library ------------------------------------------------
+
+# link_directories() will add directoies for linker to look for libraries
+# link_directories("/usr/lib")
+# link_directories("/usr/lib/x86_64-linux-gnu")
+
 # target_link_libraries needs to be after the add_executable command
 # because it will use the "docx" name defined by add_executable.
 # link_directories(AFTER "lib")
 
-target_link_libraries(docx "${CMAKE_SOURCE_DIR}/lib/libxml2.a")
 target_link_libraries(docx "lzma")
 target_link_libraries(docx "iconv")
 target_link_libraries(docx "z")
-target_link_libraries(docx "ws2_32")
+#target_link_libraries(docx "ws2_32")
+target_link_libraries(docx "xml2")
