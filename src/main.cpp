@@ -30,9 +30,6 @@ SO ALWAYS TEST IF THE CHILDREN NODE IS NULL (empty) BEFORE ACCESSING ITS NAME OR
 
 int main (void) {
 
-    docx::docx doc;
-    doc.add_paragraph("Teste");
-    //print_xml_document(doc);
-    write_xml(doc.document, "teste.xml");
+    return 1;
 
 }

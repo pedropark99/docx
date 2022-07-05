@@ -1,17 +1,15 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pedro/Documentos/Projetos/Packages/docx/src/main.cpp" "/home/pedro/Documentos/Projetos/Packages/docx/CMakeFiles/docx.dir/src/main.cpp.o"
-  "/home/pedro/Documentos/Projetos/Packages/docx/src/paragraphs.cpp" "/home/pedro/Documentos/Projetos/Packages/docx/CMakeFiles/docx.dir/src/paragraphs.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "include"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/c/Users/pedro.duarte/Documents/projects/docx/src/main.cpp" "CMakeFiles/docx.dir/src/main.cpp.o" "gcc" "CMakeFiles/docx.dir/src/main.cpp.o.d"
+  "/c/Users/pedro.duarte/Documents/projects/docx/src/paragraphs.cpp" "CMakeFiles/docx.dir/src/paragraphs.cpp.o" "gcc" "CMakeFiles/docx.dir/src/paragraphs.cpp.o.d"
   )
 
 # Targets to which this target links.

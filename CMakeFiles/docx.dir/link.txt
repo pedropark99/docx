@@ -1,1 +1,1 @@
-/usr/bin/c++  -DIN_LIBXML   CMakeFiles/docx.dir/src/main.cpp.o CMakeFiles/docx.dir/src/paragraphs.cpp.o  -o docx  -llzma -liconv -lz -lxml2 
+/usr/bin/c++.exe -DIN_LIBXML -Wl,--enable-auto-import CMakeFiles/docx.dir/src/main.cpp.o CMakeFiles/docx.dir/src/paragraphs.cpp.o -o docx.exe -Wl,--out-implib,libdocx.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -llzma -liconv -lz -lxml2 
